@@ -27,97 +27,17 @@ modules: [
 
 The following properties can be configured:
 
-
-<table width="100%">
-	<!-- why, markdown... -->
-	<thead>
-		<tr>
-			<th>Option</th>
-			<th width="100%">Description</th>
-		</tr>
-	<thead>
-	<tbody>
-
-		<tr>
-			<td><code>lon</code></td>
-			<td>The location longitude for weather information.
-			</td>
-		</tr>
-		<tr>
-			<td><code>lat</code></td>
-			<td>The location latitude for weather information.
-		</tr>
-		<tr>
-			<td><code>units</code></td>
-			<td>What units to use. Specified by config.js<br>
-				<br><b>Possible values:</b> <code>config.units</code> = Specified by config.js, <code>default</code> = Kelvin, <code>metric</code> = Celsius, <code>imperial</code> =Fahrenheit
-				<br><b>Default value:</b> <code>config.units</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>maxNumberOfDays</code></td>
-			<td>How many days of forecast to return. Specified by config.js<br>
-				<br><b>Possible values:</b> <code>1</code> - <code>16</code>
-				<br><b>Default value:</b> <code>5</code> (5 days)
-			</td>
-		</tr>
-		<tr>
-			<td><code>updateInterval</code></td>
-			<td>How often does the content needs to be fetched? (Milliseconds)<br>
-				<br><b>Possible values:</b> <code>1000</code> - <code>86400000</code>
-				<br><b>Default value:</b> <code>300000</code> (10 minutes)
-			</td>
-		</tr>
-		<tr>
-			<td><code>animationSpeed</code></td>
-			<td>Speed of the update animation. (Milliseconds)<br>
-				<br><b>Possible values:</b><code>0</code> - <code>5000</code>
-				<br><b>Default value:</b> <code>2000</code> (2 seconds)
-			</td>
-		</tr>
-		<tr>
-			<td><code>useBeaufort</code></td>
-			<td>Pick between using the Beaufort scale for wind speed or using the default units.<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>lang</code></td>
-			<td>The language of the days.<br>
-				<br><b>Possible values:</b> <code>en</code>, <code>nl</code>, <code>ru</code>, etc ...
-				<br><b>Default value:</b> uses value of <i>config.language</i>
-			</td>
-		</tr>
-		<tr>
-			<td><code>fade</code></td>
-			<td>Fade the future events to black. (Gradient)<br>
-				<br><b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br><b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>fadePoint</code></td>
-			<td>Where to start fade?<br>
-				<br><b>Possible values:</b> <code>0</code> (top of the list) - <code>1</code> (bottom of list)
-				<br><b>Default value:</b> <code>0.25</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>initialLoadDelay</code></td>
-			<td>The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds)<br>
-				<br><b>Possible values:</b> <code>1000</code> - <code>5000</code>
-				<br><b>Default value:</b>  <code>0</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>retryDelay</code></td>
-			<td>The delay before retrying after a request failure. (Milliseconds)<br>
-				<br><b>Possible values:</b> <code>1000</code> - <code>60000</code>
-				<br><b>Default value:</b>  <code>2500</code>
-			</td>
-		</tr>
-
-
-	</tbody>
-</table>
+|Option|                  Description                  |                  Possible values                         | Default |
+|------|-----------------------------------------------|----------------------------------------------------------|---------|
+|`lon` |The location longitude for weather information.| xx.xxxx                                                  | |
+|`lat` |The location latitude for weather information. | yy.yyyy                                                  | |
+|`units`|What units to use. Specified by config.js - config.units | Kelvin, metric (Celsius), imperial (Fahrenheit)|*config.units* or Kelvin |
+|`maxNumberOfDays`| How many days of forecast to return. Specified by config.js | 1-16 | 5days |
+|`updateInterval`| How often does the content needs to be fetched? (Milliseconds) | 1000-86400000 | 300000(10 minutes) |
+|`animationSpeed`| Speed of the update animation. (Milliseconds)  | 0-5000 | 2000(2 seconds) |
+|`useBeaufort`| Pick between using the Beaufort scale for wind speed or using the default units. | true, false | true |
+|`lang`| The language of the days. | en, nl, ru, etc... | *config.language* |
+|`fade`| Fade the future events to black. (Gradient) | true, false | true |
+|`fadePoint`| Where to start fade? | 0-1 (0=top of list, 1=bottom of list) | 0,25 |
+|`initialLoadDelay`| The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds) | 1000-5000 | 0 |
+|`retryDelay`| The delay before retrying after a request failure. (Milliseconds) | 1000-60000 | 2500 |
