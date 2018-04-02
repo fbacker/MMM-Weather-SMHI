@@ -41,3 +41,4 @@ The following properties can be configured:
 |`fadePoint`| Where to start fade? | 0-1 (0=top of list, 1=bottom of list) | 0,25 |
 |`initialLoadDelay`| The initial delay before loading. If you have multiple modules that use the same API key, you might want to delay one of the requests. (Milliseconds) | 1000-5000 | 0 |
 |`retryDelay`| The delay before retrying after a request failure. (Milliseconds) | 1000-60000 | 2500 |
+|`title`| Title of the weather table. | Text | Weather Forecast |
