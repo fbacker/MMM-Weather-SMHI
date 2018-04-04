@@ -24,6 +24,7 @@ Module.register("MMM-Weather-SMHI",{
 		lang: config.language,
 		fade: true,
 		fadePoint: 0.25, // Start on 1/4th of the list.
+		title: 'Weather Forecast',
 
 		initialLoadDelay: 2500, // 2.5 seconds delay. This delay is used to keep the OpenWeather API happy.
 		retryDelay: 2500,
@@ -223,7 +224,7 @@ Module.register("MMM-Weather-SMHI",{
 
 
 		var header = document.createElement("header");
-		header.innerHTML = 'Weather Forecast';
+		header.innerHTML = this.config.title;
 		wrapper.appendChild(header);
 		wrapper.appendChild(table);
 
