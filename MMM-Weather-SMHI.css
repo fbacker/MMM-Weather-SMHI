@@ -4,7 +4,7 @@
 }
 
 .MMM-Weather-SMHI .weather-icon-large {
-  font-size: 75%;
+  font-size: 65%;
   line-height: 65px;
   display: inline-block;
   -ms-transform: translate(0, -3px); /* IE 9 */
@@ -12,10 +12,10 @@
   transform: translate(0, -3px);
 }
 
-
 .MMM-Weather-SMHI .weather-icon {
   padding-right: 15px;
   text-align: center;
+  font-size: 65%;
 }
 
 .MMM-Weather-SMHI .weather-icon1 {
