@@ -523,10 +523,12 @@ Module.register("MMM-Weather-SMHI", {
 			[
 				this
 					.config
-					.lon,
+					.lon
+					.toFixed(4),
 				this
 					.config
 					.lat
+					.toFixed(4)
 			]
 		);
 		var self = this;
