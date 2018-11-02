@@ -11,7 +11,7 @@ Module.register("MMM-Weather-SMHI", {
 	// Default module config.
 	defaults: {
 		url:
-			"http://opendata-download-metfcst.smhi.se/api/category/pmp2g/version/2/geotype/point/lon/%s/lat/%s/data.json",
+			"http://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/%s/lat/%s/data.json",
 		lon: 0,
 		lat: 0,
 
@@ -36,66 +36,115 @@ Module.register("MMM-Weather-SMHI", {
 		initialLoadDelay: 2500, // 2.5 seconds delay. This delay is used to keep the OpenWeather API happy.
 		retryDelay: 2500,
 
+		// Mapping of SMHI Wsymb2 to an actual weather icon
 		iconTable: {
-			1: [
-				"sky wi-day-sunny",
+			1: [	// SMHI: Clear sky
+				"wi-day-sunny",
 				"wi-night-clear"
-			],
-			2: [
-				"sky wi-day-cloudy",
+			],			
+			2: [	// SMHI: Nearly clear sky
+				"wi-day-sunny-overcast",
 				"wi-night-partly-cloudy"
 			],
-			3: [
+			3: [	// SMHI: Variable cloudness
 				"wi-day-cloudy",
 				"wi-night-alt-cloudy"
 			],
-			4: [
-				"wi-day-cloudy-high",
+			4: [	// SMHI: Halfclear sky
+				"wi-day-cloudy",
 				"wi-night-alt-cloudy"
 			],
-			5: [
+			5: [	// SMHI: Cloudy sky
 				"wi-day-cloudy",
-				"wi-night-cloudy"
+				"wi-night-alt-cloudy"
 			],
-			6: [
-				"wi-day-sleet",
-				"wi-night-alt-sleet"
+			6: [	// SMHI: Overcast
+				"wi-cloudy",
+				"wi-cloudy"
 			],
-			7: [
+			7: [	// SMHI: Fog
 				"wi-day-fog",
 				"wi-night-fog"
 			],
-			8: [
+			8: [	// SMHI: Light rain showers
 				"wi-day-showers",
 				"wi-night-alt-showers"
 			],
-			9: [
-				"wi-day-lightning",
-				"wi-night-alt-lightning"
+			9: [	// SMHI: Moderate rain showers
+				"wi-day-showers",
+				"wi-night-alt-showers"
 			],
-			10: [
+			10: [	// SMHI: Heavy rain showers
+				"wi-day-showers",
+				"wi-night-alt-showers"
+			],
+			11: [	// SMHI: Thunderstorm
+				"wi-day-thunderstorm",
+				"wi-night-alt-thunderstorm"
+			],
+			12: [	// SMHI: Light sleet showers
 				"wi-day-sleet",
 				"wi-night-alt-sleet"
 			],
-			11: [
-				"wi-day-snow",
-				"wi-night-snow"
-			],
-			12: [
-				"wi-day-rain",
-				"wi-night-rain"
-			],
-			13: [
-				"wi-day-lightning",
-				"wi-night-lightning"
-			],
-			14: [
-				"wi-day-snow",
+			13: [	// SMHI: Moderate sleet showers
+				"wi-day-sleet",
 				"wi-night-alt-sleet"
 			],
-			15: [
+			14: [	// SMHI: Heavy sleet showers
+				"wi-day-sleet",
+				"wi-night-alt-sleet"
+			],
+			15: [	// SMHI: Light snow showers
 				"wi-day-snow",
-				"wi-night-snow"
+				"wi-night-alt-snow"
+			],
+			16: [	// SMHI: Moderate snow showers
+				"wi-day-snow",
+				"wi-night-alt-snow"
+			],
+			17: [	// SMHI: Heavy snow showers
+				"wi-day-snow",
+				"wi-night-alt-snow"
+			],
+			18: [	// SMHI: Light rain
+				"wi-day-rain",
+				"wi-night-alt-rain"
+			],
+			19: [	// SMHI: Moderate rain
+				"wi-day-rain",
+				"wi-night-alt-rain"
+			],
+			20: [	// SMHI: Heavy rain
+				"wi-day-rain",
+				"wi-night-alt-rain"
+			],
+			21: [	// SMHI: Thunder
+				"wi-day-lightning",
+				"wi-night-alt-lightning"
+			],
+			22: [	// SMHI: Light sleet
+				"wi-day-sleet",
+				"wi-night-alt-sleet"
+			],
+			23: [	// SMHI: Moderate sleet
+				"wi-day-sleet",
+				"wi-night-alt-sleet"
+			],
+			24: [	// SMHI: Heavy sleet
+				"wi-day-sleet",
+				"wi-night-alt-sleet"
+			],
+			25: [	// SMHI: Light snowfall
+				"wi-day-snow",
+				"wi-night-alt-snow"
+			],
+			26: [	// SMHI: Moderate snowfall
+				"wi-day-snow",
+				"wi-night-alt-snow"
+			],
+			27: [	// SMHI: Heavy snowfall
+				"wi-day-snow",
+				"wi-night-alt-snow"
 			]
 		}
 	},
@@ -642,7 +691,7 @@ Module.register("MMM-Weather-SMHI", {
 					"ddd"
 				),
 				icon: this.processWeatherGetItem(
-					"Wsymb",
+					"Wsymb2",
 					forecast
 				),
 				temp: parseFloat(
