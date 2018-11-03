@@ -1,6 +1,6 @@
 .MMM-Weather-SMHI .day {
   padding-left: 0;
-  padding-right: 25px;
+  padding-right: 10px;
 }
 
 .MMM-Weather-SMHI .weather-icon-large {
@@ -13,18 +13,32 @@
 }
 
 .MMM-Weather-SMHI .weather-icon {
-  padding-right: 15px;
-  text-align: center;
+  text-align: left;
   font-size: 65%;
 }
 
-.MMM-Weather-SMHI .weather-icon1 {
-  padding-left: 15px;
-  text-align: center;
+.MMM-Weather-SMHI .temp-daily {
+  padding-left: 5px;
+  text-align: right;
 }
 
-.MMM-Weather-SMHI .min-temp {
-  padding-right: 0;
+.MMM-Weather-SMHI .windspeed-daily {
+  padding-left: 5px;
+  text-align: right;
+}
+
+.MMM-Weather-SMHI .direction-daily {
+  padding-left: 0px;
+  text-align: left;
+}
+
+.MMM-Weather-SMHI .rain-daily {
+  padding-left: 5px;
+  text-align: right;
+}
+
+.MMM-Weather-SMHI .mm-unit {
+  font-size: 50%;
 }
 
 .MMM-Weather-SMHI header {

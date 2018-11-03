@@ -36,6 +36,11 @@ The following properties can be configured:
 |`updateInterval`| How often does the content needs to be fetched? (Milliseconds) | 1000-86400000 | 300000(10 minutes) |
 |`animationSpeed`| Speed of the update animation. (Milliseconds)  | 0-5000 | 2000(2 seconds) |
 |`useBeaufort`| Pick between using the Beaufort scale for wind speed or using the default units. | true, false | true |
+|`showWindDirection`| Shows the wind direction after the wind speed. | true, false | false |
+|`windDirectionMode`| Showing wind direction using text (e.g. NNE) or arrow. | 0 = text, 1 = arrow | 0 |
+|`showDailyWindInfo`| Showing wind information per day. | true, false | false |
+|`showDailyRainInfo`| Showing rain information per day. | true, false | false |
+|`tempDecimals'| The number of decimals to use for temperature. | 0, 1 | 1 |
 |`lang`| The language of the days. | en, nl, ru, etc... | *config.language* |
 |`fade`| Fade the future events to black. (Gradient) | true, false | true |
 |`fadePoint`| Where to start fade? | 0-1 (0=top of list, 1=bottom of list) | 0,25 |
